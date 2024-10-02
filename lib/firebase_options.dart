@@ -52,7 +52,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCupYEYEHaVWXn0kiRm1qpc9ISqf8L3eiA',
-    appId: '1:10861033062:android:c59cb81e56050ffbb79fa7',
+    appId: '1:10861033062:android:01bfba53d53b2967b79fa7',
     messagingSenderId: '10861033062',
     projectId: 'login-app-41bbc',
     storageBucket: 'login-app-41bbc.appspot.com',
@@ -66,4 +66,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'login-app-41bbc.appspot.com',
     iosBundleId: 'com.example.loginApp',
   );
+
 }
