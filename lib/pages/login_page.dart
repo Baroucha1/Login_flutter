@@ -6,7 +6,8 @@ import 'package:login_app/components/my_textfield.dart';
 import 'package:login_app/components/square_tile.dart';
 
 class LoginPage extends StatefulWidget {
-  LoginPage({super.key});
+  final Function()? onTap;
+  LoginPage({super.key, required this.onTap});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -143,7 +144,7 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 25,),
             
                 // google sign in button
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                   SquareTile(imagepath: 'lib/images/google.png')
@@ -156,7 +157,10 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     Text('Not a member?'),
                     const SizedBox(width: 5,),
-                    Text('Register Now',style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),),
+                    GestureDetector(
+                        onTap: onTap,
+                        child: const Text('Register Now',
+                          style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),)),
                   ],
                 )
                 ]
