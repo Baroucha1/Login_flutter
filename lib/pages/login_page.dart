@@ -114,7 +114,7 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 25,),
             
                 // sign in button
-                MyButton(onTap: signUserIn ),
+                MyButton(onTap: signUserIn ,text: "sign User In",),
                 // or continue with
                 const SizedBox(height: 50,),
                 Padding(
@@ -158,7 +158,7 @@ class _LoginPageState extends State<LoginPage> {
                     Text('Not a member?'),
                     const SizedBox(width: 5,),
                     GestureDetector(
-                        onTap: onTap,
+                        onTap: widget.onTap,
                         child: const Text('Register Now',
                           style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),)),
                   ],
