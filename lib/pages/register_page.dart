@@ -106,22 +106,9 @@ class _LoginPageState extends State<RegisterPage> {
                   // password textfield
                   MyTextfield(controller: passwordConfirmController, hintText: 'Confirm Password',obscureText: true,),
                   const SizedBox(height: 25,),
-                  // forgot password ?
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 25),
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text('Forgot Password ?',
-                            style: TextStyle(
-                              color: Colors.grey[700],
-                              fontSize: 16,
-                            ),
-                          ),]
-                    ),
-                  ),
 
-                  const SizedBox(height: 25,),
+
+
 
                   // sign in button
                   MyButton(onTap: signUserUp , text: "Sign User Up",),
