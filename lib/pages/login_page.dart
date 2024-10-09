@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:login_app/components/my_button.dart';
 import 'package:login_app/components/my_textfield.dart';
 import 'package:login_app/components/square_tile.dart';
+import 'package:login_app/services/auth_service.dart';
 
 class LoginPage extends StatefulWidget {
   final Function()? onTap;
@@ -144,10 +145,10 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 25,),
             
                 // google sign in button
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                  SquareTile(imagepath: 'lib/images/google.png')
+                  SquareTile(imagepath: 'lib/images/google.png',onTap: () => AuthService().signInWithGoogle() ,)
                 ],),
             
                 const SizedBox(height: 30,),
